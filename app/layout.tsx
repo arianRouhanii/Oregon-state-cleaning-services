@@ -16,10 +16,10 @@ export const khand = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DC",
+  title: "Oregon state cleaning services",
   description: "Employee Manager",
   icons: {
-    icon: "/LOGO.png",
+    icon: "/main_logo.png",
   },
 };
 

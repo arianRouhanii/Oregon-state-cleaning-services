@@ -82,9 +82,9 @@ export default function Employees({ setPageState }: Stage2Props) {
                       }}
                       className="gap-0.5 flex flex-col"
                     >
-                      <div className="aspect-square w-2 bg-[#FF7E2A] rounded-full"></div>
-                      <div className="aspect-square w-2 bg-[#FF7E2A] rounded-full"></div>
-                      <div className="aspect-square w-2 bg-[#FF7E2A] rounded-full"></div>
+                      <div className="aspect-square w-2 bg-[#105A35] rounded-full"></div>
+                      <div className="aspect-square w-2 bg-[#105A35] rounded-full"></div>
+                      <div className="aspect-square w-2 bg-[#105A35] rounded-full"></div>
                     </button>
                   </div>
                 </td>
@@ -108,7 +108,6 @@ export default function Employees({ setPageState }: Stage2Props) {
               animate={{ opacity: 0.4 }}
               exit={{ opacity: 0 }}
             />
-
             <motion.div
               className="bg-white rounded-2xl p-6 w-96 flex flex-col gap-6 shadow-xl z-50"
               initial={{ y: 50, opacity: 0, scale: 0.95 }}
@@ -143,7 +142,7 @@ export default function Employees({ setPageState }: Stage2Props) {
         <>
           <div className="fixed inset-0 z-40" onClick={() => setMenu(null)} />
           <div
-            className="fixed z-50 bg-white rounded-xl shadow-xl p-4 w-40"
+            className="fixed z-50 bg-white border border-[#105A35] rounded-xl shadow-xl p-4 w-40"
             style={{ top: menu.y, left: menu.x }}
           >
             <div className="flex items-center justify-between mb-3">

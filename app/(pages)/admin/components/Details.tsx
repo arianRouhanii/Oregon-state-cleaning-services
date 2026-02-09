@@ -33,8 +33,8 @@ export default function Details({ setPageState }: Stage4Props) {
   const stats = [
     { label: "Average Income", value: "$48", color: "text-green-500", days: "14 Days" },
     { label: "Total Income", value: "$2150", color: "text-green-500", days: "14 Days" },
-    { label: "Average time", value: "07:45", color: "text-[#FF7E2A]", days: "30 Days" },
-    { label: "Total time", value: "168H", color: "text-[#FF7E2A]", days: "30 Days" },
+    { label: "Average time", value: "07:45", color: "text-[#105A35]", days: "30 Days" },
+    { label: "Total time", value: "168H", color: "text-[#105A35]", days: "30 Days" },
   ];
 
   const rows: Row[] = [
@@ -90,7 +90,7 @@ export default function Details({ setPageState }: Stage4Props) {
       <div className="flex-1 flex flex-col gap-5">
         <div className="flex justify-between items-center relative">
           <div className="flex gap-8 items-center">
-            <div onClick={() => setPageState(2)} className="bg-[#FF7E2A] cursor-pointer rounded-full h-8 w-8 text-white flex items-center pr-0.5 justify-center text-2xl hover:scale-110 transition">
+            <div onClick={() => setPageState(2)} className="bg-[#105A35] cursor-pointer rounded-full h-8 w-8 text-white flex items-center pr-0.5 justify-center text-2xl hover:scale-110 transition">
               <Bck />
             </div>
             <p className="text-2xl xl:text-4xl font-medium">Pooria</p>
@@ -104,7 +104,7 @@ export default function Details({ setPageState }: Stage4Props) {
           {stats.map(s => (
             <motion.div
               key={s.label}
-              className="bg-[#646464]/5 p-5 aspect-square sm:aspect-auto xl:aspect-square w-full xl:w-1/7 rounded-2xl hover:scale-105 transition-transform"
+              className="bg-[#646464]/5 p-5 font-semibold aspect-square sm:aspect-auto xl:aspect-square w-full xl:w-1/7 rounded-2xl hover:scale-105 transition-transform"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
@@ -150,7 +150,7 @@ export default function Details({ setPageState }: Stage4Props) {
                 <progress
                   max={100}
                   value={r.progress}
-                  className="w-full h-4 rounded-full border p-px border-[#FF7E2A] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#FF7E2A] [&::-webkit-progress-value]:rounded-full"
+                  className="w-full h-4 rounded-full border p-px border-[#105A35] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#105A35] [&::-webkit-progress-value]:rounded-full"
                 />
                 <span style={{ color: parseInt(r.time.split(":")[0]) < 8 ? "red" : "green" }}>{r.time}</span>
               </div>
@@ -161,7 +161,7 @@ export default function Details({ setPageState }: Stage4Props) {
         <p className="text-2xl xl:text-4xl font-medium hidden xl:flex mt-5">History</p>
         <div className="overflow-y-auto h-[35vh] hidden xl:block">
           <table className="min-w-full">
-            <thead className="sticky top-0 bg-[#F8F8F8]">
+            <thead className="sticky top-0">
               <tr>
                 {["Date", "Location", "Description", "Total time", "Income"].map(h => (
                   <th key={h} className="px-4 py-2 text-left text-lg text-gray-500">{h}</th>
@@ -199,7 +199,7 @@ export default function Details({ setPageState }: Stage4Props) {
                       <progress
                         max={100}
                         value={r.progress}
-                        className="w-full h-4 rounded-full border p-px border-[#FF7E2A] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#FF7E2A] [&::-webkit-progress-value]:rounded-full"
+                        className="w-full h-4 rounded-full border p-px border-[#105A35] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#105A35] [&::-webkit-progress-value]:rounded-full"
                       />
                       <span style={{ color: parseInt(r.time.split(":")[0]) < 8 ? "red" : "green" }}>
                         {r.time}
@@ -226,7 +226,7 @@ export default function Details({ setPageState }: Stage4Props) {
                 }
                 moveRangeOnFirstSelection={false}
                 editableDateInputs={true}
-                rangeColors={['#FF7E2A']}
+                rangeColors={['#105A35']}
               />
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function Details({ setPageState }: Stage4Props) {
                 {row.locations.map((_, i) => (
                   <button
                     key={i}
-                    className={`px-3 py-1 rounded-full ${i === openMap.index ? 'bg-[#FF7E2A] text-white' : 'bg-gray-200'}`}
+                    className={`px-3 py-1 rounded-full ${i === openMap.index ? 'bg-[#105A35] text-white' : 'bg-gray-200'}`}
                     onClick={() => setOpenMap({ rowId: row.id, index: i })}
                   >
                     Job {i + 1}

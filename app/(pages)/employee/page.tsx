@@ -79,10 +79,9 @@ export default function Employee() {
     >
       <div className={`${showPopup || showClockOutPopup ? 'blur-sm pointer-events-none' : ''}`}>
         <div className="w-full top-3 p-5 flex justify-between items-center">
-          <Image alt="DC" src="/logo.png" width={50} height={50} />
+          <Image alt="DC" src="/main_logo.png" width={50} height={50} />
           <a className="text-red-500" href="../" ><Logout /></a>
         </div>
-
         <div className="w-full border-[#F1F1F1] flex flex-col justify-center items-center bg-white rounded-4xl px-5">
           <form className="flex flex-col gap-5 justify-center w-full">
             <div className="flex flex-col gap-5 bg-[#F1F1F1] rounded-2xl p-5">
@@ -107,7 +106,7 @@ export default function Employee() {
                 <progress
                   max={MAX_SECONDS}
                   value={seconds}
-                  className="w-full h-4 rounded-full border p-0.5 border-[#FF7E2A] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#FF7E2A] [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-[#FF7E2A] [&::-moz-progress-bar]:rounded-full"
+                  className="w-full h-4 rounded-full border p-0.5 border-[#105A35] appearance-none [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:bg-[#105A35] [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-[#105A35] [&::-moz-progress-bar]:rounded-full"
                 />
               </div>
             </div>
@@ -124,8 +123,6 @@ export default function Employee() {
           </form>
         </div>
       </div>
-
-      {/* Clock-in Popup */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
@@ -154,8 +151,6 @@ export default function Employee() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Clock-out Popup */}
       <AnimatePresence>
         {showClockOutPopup && (
           <motion.div
@@ -176,8 +171,6 @@ export default function Employee() {
                 <p>{formatDate(currentDate)}</p>
                 <p>{formatClock(currentDate)}</p>
               </div>
-
-              {/* Animated Checkboxes */}
               <div className="flex flex-col gap-2 mt-2">
                 {checkboxItems.map(item => (
                   <label key={item.key} className="flex items-center gap-3 cursor-pointer select-none">

@@ -61,8 +61,8 @@ export default function Header() {
             <div className="w-1/7 pl-3 xl:pl-0">
                 <div className="w-14.25 h-12.25 hover:scale-120 hover:rotate-10 transition duration-300">
                     <Image
-                        alt="DC"
-                        src="/LOGO.png"
+                        alt="logo"
+                        src="/main_logo.png"
                         width={100}
                         height={100}
                         className="cursor-pointer"

@@ -33,7 +33,7 @@ export default function Add({ setPageState }: Stage3Props) {
       <div className="flex flex-row gap-8">
         <div
           onClick={() => setPageState(1)}
-          className="bg-[#FF7E2A] cursor-pointer rounded-full h-8 w-8 text-white flex items-center hover:scale-110 transition justify-center pr-0.5 text-2xl"
+          className="bg-[#105A35] cursor-pointer rounded-full h-8 w-8 text-white flex items-center hover:scale-110 transition justify-center pr-0.5 text-2xl"
         >
           <Bck />
         </div>
@@ -50,10 +50,10 @@ export default function Add({ setPageState }: Stage3Props) {
               id={f.id}
               ref={(el) => { inputRefs.current[idx] = el!; }}
               onKeyDown={(e) => handleKeyDown(e, idx)}
-              className="  bg-white p-2 border border-gray-300 rounded-xl font-bold outline-none focus:border-[#FF7E2A] focus:ring-2 focus:ring-[#FF7E2A]/50  hover:shadow-md hover:scale-[1.02] transition-all duration-300 "/>
+              className="  bg-white p-2 border border-gray-300 rounded-xl font-bold outline-none focus:border-[#105A35] focus:ring-2 focus:ring-[#105A35]/50  hover:shadow-md hover:scale-[1.02] transition-all duration-300 "/>
           </div>
         ))}
-        <input type="submit" value="Save" className=" bg-[#FF7E2A] mt-5 cursor-pointer xl:w-1/4 text-white font-bold p-2 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 "/>
+        <input type="submit" value="Save" className=" bg-[#105A35] mt-5 cursor-pointer xl:w-1/4 text-white font-bold p-2 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 "/>
       </form>
     </div>
   );
